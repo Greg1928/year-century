@@ -32,6 +32,6 @@ if(syear.length === 3){
 
 // MAIN
 if(year >= 1 && year <= 100){
-    alert("1° secolo!");
+    alert("1° secolo");
     window.location.reload();
 }else yearToCentury();
