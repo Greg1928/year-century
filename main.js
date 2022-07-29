@@ -3,11 +3,15 @@ function yearToCentury(){
     if(syear.slice(index, syear.length) === "01" || syear.slice(index, syear.length) !== "00"){
         firstHalf = syear.slice(0,index);
         alert(parseInt(firstHalf) + 1 + "° secolo");
-        window.location.reload();
+        // window.location.reload();
 }else {
     alert(syear.slice(0,index)+ "° secolo");
-    window.location.reload();
+    // window.location.reload();
     }
+}
+
+function reload(){
+    window.location.reload();
 }
 
 // VARIABLES
@@ -19,7 +23,7 @@ let syear
 // USER INPUT VALIDATE
 do{
     year = Number(prompt("Anno:"));
-}while(year > 9999 || !parseInt(year));
+}while(year > 9999);
 
 syear = year.toString();
 
@@ -33,5 +37,5 @@ if(syear.length === 3){
 // MAIN
 if(year >= 1 && year <= 100){
     alert("1° secolo");
-    window.location.reload();
+    // window.location.reload();
 }else yearToCentury();
